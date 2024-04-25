@@ -8,10 +8,14 @@
     </style>
     <title>수도권 랜덤 전철역</title>
     <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
   </head>
-  <body>
+  <body style="height: 100%">
     <div style="text-align: center">
-      <div style="border: 1px solid black; border-radius: 1rem; margin: 1rem">
+      <div style="padding-top: 50%; padding-bottom: 50%; margin: 1rem">
         <table
           style="margin-top: 0.25rem; margin-left: auto; margin-right: auto"
         >
@@ -2068,7 +2072,6 @@
           elem.style.color = "white";
           elem.style.padding = "0.25rem";
           elem.innerText = line;
-          console.log(line);
 
           lineColorsDisplay.child;
           lineColorsDisplay.appendChild(elem);

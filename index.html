@@ -16,11 +16,19 @@
   <body style="height: 100%">
     <div style="text-align: center">
       <div style="padding-top: 50%; padding-bottom: 50%; margin: 1rem">
-        <table
-          style="margin-top: 0.25rem; margin-left: auto; margin-right: auto"
-        >
-          <tr id="lineColors"></tr>
-        </table>
+        <div
+          id="lineColors"
+          style="
+            margin-top: 0.25rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+          "
+        ></div>
         <h1 id="randomStnNameKor">???</h1>
         <p id="randomStnNameEng"></p>
         <p id="randomStnLocation"></p>
@@ -2060,17 +2068,22 @@
 
       randomStnBtn.onclick = function (e) {
         const idx = Math.floor(Math.random() * stnList.length);
-        const stn = stnList[idx];
+        const stn = stnList[102];
         randomStnNameKor.innerText = stn.k;
         randomStnNameEng.innerText = stn.e;
         randomStnLocation.innerText = stn.l;
         lineColorsDisplay.innerHTML = "";
         stn.n.forEach((line) => {
           const color = lineColors[line];
-          const elem = document.createElement("td");
+          const elem = document.createElement("div");
+          elem.style.display = "block";
           elem.style.backgroundColor = color;
           elem.style.color = "white";
           elem.style.padding = "0.25rem";
+          elem.style.marginLeft = "0.125rem";
+          elem.style.marginRight = "0.125rem";
+          elem.style.marginTop = "0.25rem";
+          // elem.style.width = "fit-content";
           elem.innerText = line;
 
           lineColorsDisplay.child;
